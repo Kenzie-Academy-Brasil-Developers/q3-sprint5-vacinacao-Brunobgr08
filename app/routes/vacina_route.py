@@ -1,5 +1,5 @@
 from flask import Blueprint, Flask
-# from app.controllers import vacina_controller
+from app.controllers import vacina_controller
 
 
 bp = Blueprint("vacinas", __name__, url_prefix="/vaccinations")
