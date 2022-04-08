@@ -31,16 +31,7 @@ def criar_vacina():
     except (UniqueViolation, IntegrityError):
         return {"error": 'This CPF already exists in database'}, HTTPStatus.CONFLICT
 
-    vacina_serialized = {
-        "cpf": vacina.cpf,
-        "name": vacina.name,
-        "first_shot_date": vacina.first_shot_date,
-        "second_shot_date": vacina.second_shot_date,
-        "vaccine_name": vacina.vaccine_name,
-        "health_unit_name": vacina.health_unit_name
-    }
-
-    return jsonify(vacina_serialized), HTTPStatus.CREATED
+    return jsonify(vacina), HTTPStatus.CREATED
 
 def listar_vacinas():
 
@@ -48,15 +39,4 @@ def listar_vacinas():
         Vacina.query.all()
     )
 
-    serializer = [
-        {
-            "cpf": vacina.cpf,
-            "name": vacina.name,
-            "first_shot_date": vacina.first_shot_date,
-            "second_shot_date": vacina.second_shot_date,
-            "vaccine_name": vacina.vaccine_name,
-            "health_unit_name": vacina.health_unit_name
-        } for vacina in list(vacinas)
-    ]
-
-    return jsonify(serializer), HTTPStatus.OK
+    return jsonify(vacinas), HTTPStatus.OK
