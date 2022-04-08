@@ -5,7 +5,7 @@ from sqlalchemy.exc import IntegrityError
 
 
 from app.models.vacina_model import Vacina
-from . import verify_keys
+from app.services.vacina_services import verify_keys
 
 
 def criar_vacina():
