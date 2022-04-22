@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask
+from flask import Blueprint
 from app.controllers import vacina_controller
 
 
