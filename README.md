@@ -20,7 +20,7 @@ A API tem um total de 2 endpoints, sendo relacionados a vacinas - podendo cadast
 
 #### Por se tratar de uma aplicação simples, as rotas não requerem autenticação
 
-O url base da API é https://budgets-management.herokuapp.com
+O url base da API é https://vaccination-api-bgr.herokuapp.com/
 
 <h2 align ='center'> Listando Vacinas </h2>
 
